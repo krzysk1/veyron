@@ -1,10 +1,4 @@
 <[file][][]
-//-------------------------------------
-// Plane: Bugatti Veyron
-// Compilation: krzysk(at)wp.pl
-// 3D model: Valery Gus'ev
-//-------------------------------------
-
 	<[modelmanager][][]
 		<[pointer_list_tmuniverse][DynamicObjects][]
 			<[telemetry][Telemetry][]
@@ -14,7 +8,7 @@
 				<[string8][Airspeed][AirspeedIndicator.IndicatedAirspeed]>
 				<[string8][BrakePosition][BrakeInput.Output]>
 				<[string8][GearPosition][GearInput.Output]>
-				<[tmvector3d][LookAtPosition][ 0.0 0.0 0.3 ]> //mass: 1964.0 ( -0.007 0.000 0.365 )
+				<[tmvector3d][LookAtPosition][ 0.0 0.0 0.3 ]>
 			>
 			<[camera][CameraFollow][]
 				<[string8][Description][Behind aircraft]>
@@ -164,7 +158,7 @@
 				<[tmvector3d][R0][1.3052 0.968 0.3448]>
 				<[tmvector3d][X0][ 1.0 0.0 0.0 ]>
 				<[string8][InputBrake][BrakeInput.Output]>
-				<[float64][BrakeStrength][0.5]>					
+				<[float64][BrakeStrength][0.8]>					
 			>
 			<[wheel][RightFrontWheelHull][]
 				<[float64][K][184400]>
@@ -177,7 +171,7 @@
 				<[tmvector3d][R0][1.3052 -0.968 0.3448]>
 				<[tmvector3d][X0][ 1.0 0.0 0.0 ]>
 				<[string8][InputBrake][BrakeInput.Output]>
-				<[float64][BrakeStrength][0.5]>					
+				<[float64][BrakeStrength][0.8]>					
 			>
 			<[wheel][LeftRearWheelHull][]
 				<[float64][K][184400]>
@@ -190,7 +184,7 @@
 				<[tmvector3d][R0][-1.3342 0.973 0.3618]>
 				<[tmvector3d][X0][ 1.0 0.0 0.0 ]>
 				<[string8][InputBrake][BrakeInput.Output]>
-				<[float64][BrakeStrength][0.5]>					
+				<[float64][BrakeStrength][0.8]>				
 			>
 			<[wheel][RightRearWheelHull][]
 				<[float64][K][184400]>
@@ -203,7 +197,7 @@
 				<[tmvector3d][R0][-1.3342 -0.973 0.3618]>
 				<[tmvector3d][X0][ 1.0 0.0 0.0 ]>
 				<[string8][InputBrake][BrakeInput.Output]>
-				<[float64][BrakeStrength][0.5]>					
+				<[float64][BrakeStrength][0.8]>			
 			>
 			<[airfoil][AirfoilHorizontalStabilizer][]
 				<[float64][Cl0][0.0]>
@@ -257,7 +251,7 @@
 				<[float64][Clz][ 0.0 ]>
 				<[float64][Cm][ 0.0 ]>
 			>
-			<[input_default][ThrottleInput][]
+			<[input_lever][ThrottleInput][]
 				<[string8][Input][Controls.Throttle1]>
 			>
 			<[input_default][AileronInput][]
@@ -273,7 +267,7 @@
 				<[tmvector2d][Range][-1.0 1.0]>
 			>
 			<[input_default][BrakeInput][]
-				<[string8][Input][Controls.WheelBrake]>
+                <[string8][Input][Controls.WheelBrake.Left]>
 			>
 			<[input_default][GearInput][]
 				<[string8][Input][Controls.Gear]>
@@ -307,7 +301,7 @@
 				<[string8][Input][RudderInput.Output]>
 				<[float64][Speed][4.0]>
 				<[float64][P0][0.0]>
-				<[float64][P1][-1.0]>
+				<[float64][P1][-0.4]>
 				<[float64][P2][0.0]>
 				<[float64][P3][0.0]>
 			>
@@ -334,15 +328,15 @@
 			<[output_free][ServoLightOutput][]
 				<[string8][Input][ServoLight.Output]>
 			>
-			<[servolinear][ServoSTOPLight][]
+			<[servolinear][ServoStopLight][]
 				<[string8][Input][BrakeInput.Output]>
 				<[float64][OutputSpeed][10.0]>
 				<[float64][Position][0]>
 				<[float64tmarray][InputPosition][ 0.1 0.2 ]>
 				<[float64tmarray][OutputPosition][ 0 1 ]>
 			>
-			<[output_free][ServoSTOPLightOutput][]
-				<[string8][Input][ServoSTOPLight.Output]>
+			<[output_free][ServoStopLightOutput][]
+				<[string8][Input][ServoStopLight.Output]>
 			>
 			<[turbofan][Engine][]
 				<[string8][Body][Fuselage]>
@@ -421,7 +415,7 @@
 				<[uint32][OrientationID][Fuselage.Q]>
 			>
 			<[rigidbodygraphics][driver][]
-				<[string8][GeometryList][ driver ]>
+		//		<[string8][GeometryList][ driver ]>
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
 				<[uint32][ShowInside][4]>
@@ -469,7 +463,7 @@
 				<[uint32][AngleID][ServoSteering.Output]>
 				<[tmvector3d][Axis][0.9744 0.0 -0.2248]>
 				<[tmvector3d][Pivot][0.58485 0.3636 0.7258]>
-				<[float64][AngleMax][1.2]>
+				<[float64][AngleMax][1.2]> //0.4-> 1.0
 			>
 			<[hingedbodygraphics][RightRearWheel][]
 				<[string8][GeometryList][ tire1 tire101 tire102 ]>
@@ -503,10 +497,10 @@
 				<[tmvector3d][Axis][0.0 1.0 0.0]>
 				<[tmvector3d][Pivot][1.3052 0.968 0.3448]>
 			>
-			<[graphics_input][STOPLightInput][]
-				<[uint32][InputID][ServoSTOPLight.Output]>
+			<[graphics_input][StopLightInput][]
+				<[uint32][InputID][ServoStopLight.Output]>
 			>
-			<[graphics_pointlight][stop_light_L1][]
+			<[graphics_pointlight][StopLightL1][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
 				<[tmvector3d][R0][-1.8654	0.55155	0.79575 ]>
@@ -516,9 +510,9 @@
 				<[float64][Size][0.02]>
 				<[tmvector3d][Color][ 1.0 0.3 0.1 1.0 ]>
 				<[float64][Brightness][2.0]>
-				<[string8][InputModulation][STOPLightInput.Output]>
+				<[string8][InputModulation][StopLightInput.Output]>
 			>
-			<[graphics_pointlight][stop_light_L2][]
+			<[graphics_pointlight][StopLightL2][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
 				<[tmvector3d][R0][-1.8712	0.49655	0.79785 ]>
@@ -528,9 +522,9 @@
 				<[float64][Size][0.02]>
 				<[tmvector3d][Color][ 1.0 0.3 0.1 1.0 ]>
 				<[float64][Brightness][2.0]>
-				<[string8][InputModulation][STOPLightInput.Output]>
+				<[string8][InputModulation][StopLightInput.Output]>
 			>
-			<[graphics_pointlight][stop_light_L3][]
+			<[graphics_pointlight][StopLightL3][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
 				<[tmvector3d][R0][-1.9045	0.4978	0.7414 ]>
@@ -540,9 +534,9 @@
 				<[float64][Size][0.02]>
 				<[tmvector3d][Color][ 1.0 0.3 0.1 1.0 ]>
 				<[float64][Brightness][2.0]>
-				<[string8][InputModulation][STOPLightInput.Output]>
+				<[string8][InputModulation][StopLightInput.Output]>
 			>
-			<[graphics_pointlight][stop_light_L4][]
+			<[graphics_pointlight][StopLightL4][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
 				<[tmvector3d][R0][-1.89955	0.5528	0.73965 ]>
@@ -552,9 +546,9 @@
 				<[float64][Size][0.02]>
 				<[tmvector3d][Color][ 1.0 0.3 0.1 1.0 ]>
 				<[float64][Brightness][2.0]>
-				<[string8][InputModulation][STOPLightInput.Output]>
+				<[string8][InputModulation][StopLightInput.Output]>
 			>
-			<[graphics_pointlight][stop_light_L5][]
+			<[graphics_pointlight][StopLightL5][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
 				<[tmvector3d][R0][-1.87865	0.40885	0.8003 ]>
@@ -564,9 +558,9 @@
 				<[float64][Size][0.02]>
 				<[tmvector3d][Color][ 1.0 0.3 0.1 1.0 ]>
 				<[float64][Brightness][2.0]>
-				<[string8][InputModulation][STOPLightInput.Output]>
+				<[string8][InputModulation][StopLightInput.Output]>
 			>
-			<[graphics_pointlight][stop_light_L6][]
+			<[graphics_pointlight][StopLightL6][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
 				<[tmvector3d][R0][-1.91085	0.40995	0.74315 ]>
@@ -576,9 +570,9 @@
 				<[float64][Size][0.02]>
 				<[tmvector3d][Color][ 1.0 0.3 0.1 1.0 ]>
 				<[float64][Brightness][2.0]>
-				<[string8][InputModulation][STOPLightInput.Output]>
+				<[string8][InputModulation][StopLightInput.Output]>
 			>
-			<[graphics_pointlight][stop_light_L7][]
+			<[graphics_pointlight][StopLightL7][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
 				<[tmvector3d][R0][-1.88185	0.35385	0.801 ]>
@@ -588,9 +582,9 @@
 				<[float64][Size][0.02]>
 				<[tmvector3d][Color][ 1.0 0.3 0.1 1.0 ]>
 				<[float64][Brightness][2.0]>
-				<[string8][InputModulation][STOPLightInput.Output]>
+				<[string8][InputModulation][StopLightInput.Output]>
 			>
-			<[graphics_pointlight][stop_light_L8][]
+			<[graphics_pointlight][StopLightL8][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
 				<[tmvector3d][R0][-1.91435	0.355	0.74405 ]>
@@ -600,9 +594,9 @@
 				<[float64][Size][0.02]>
 				<[tmvector3d][Color][ 1.0 0.3 0.1 1.0 ]>
 				<[float64][Brightness][2.0]>
-				<[string8][InputModulation][STOPLightInput.Output]>
+				<[string8][InputModulation][StopLightInput.Output]>
 			>
-			<[graphics_pointlight][stop_light_R1][]
+			<[graphics_pointlight][StopLightR1][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
 				<[tmvector3d][R0][-1.88185	-0.35385	0.801 ]>
@@ -612,9 +606,9 @@
 				<[float64][Size][0.02]>
 				<[tmvector3d][Color][ 1.0 0.3 0.1 1.0 ]>
 				<[float64][Brightness][2.0]>
-				<[string8][InputModulation][STOPLightInput.Output]>
+				<[string8][InputModulation][StopLightInput.Output]>
 			>
-			<[graphics_pointlight][stop_light_R2][]
+			<[graphics_pointlight][StopLightR2][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
 				<[tmvector3d][R0][-1.87865	-0.4088	0.8003 ]>
@@ -624,9 +618,9 @@
 				<[float64][Size][0.02]>
 				<[tmvector3d][Color][ 1.0 0.3 0.1 1.0 ]>
 				<[float64][Brightness][2.0]>
-				<[string8][InputModulation][STOPLightInput.Output]>
+				<[string8][InputModulation][StopLightInput.Output]>
 			>
-			<[graphics_pointlight][stop_light_R3][]
+			<[graphics_pointlight][StopLightR3][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
 				<[tmvector3d][R0][-1.91085	-0.40995	0.74315 ]>
@@ -636,9 +630,9 @@
 				<[float64][Size][0.02]>
 				<[tmvector3d][Color][ 1.0 0.3 0.1 1.0 ]>
 				<[float64][Brightness][2.0]>
-				<[string8][InputModulation][STOPLightInput.Output]>
+				<[string8][InputModulation][StopLightInput.Output]>
 			>
-			<[graphics_pointlight][stop_light_R4][]
+			<[graphics_pointlight][StopLightR4][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
 				<[tmvector3d][R0][-1.91435	-0.35495	0.74405 ]>
@@ -648,9 +642,9 @@
 				<[float64][Size][0.02]>
 				<[tmvector3d][Color][ 1.0 0.3 0.1 1.0 ]>
 				<[float64][Brightness][2.0]>
-				<[string8][InputModulation][STOPLightInput.Output]>
+				<[string8][InputModulation][StopLightInput.Output]>
 			>
-			<[graphics_pointlight][stop_light_R5][]
+			<[graphics_pointlight][StopLightR5][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
 				<[tmvector3d][R0][-1.8712	-0.4965	0.79785 ]>
@@ -660,9 +654,9 @@
 				<[float64][Size][0.02]>
 				<[tmvector3d][Color][ 1.0 0.3 0.1 1.0 ]>
 				<[float64][Brightness][2.0]>
-				<[string8][InputModulation][STOPLightInput.Output]>
+				<[string8][InputModulation][StopLightInput.Output]>
 			>
-			<[graphics_pointlight][stop_light_R6][]
+			<[graphics_pointlight][StopLightR6][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
 				<[tmvector3d][R0][-1.8654	-0.5515	0.79575 ]>
@@ -672,9 +666,9 @@
 				<[float64][Size][0.02]>
 				<[tmvector3d][Color][ 1.0 0.3 0.1 1.0 ]>
 				<[float64][Brightness][2.0]>
-				<[string8][InputModulation][STOPLightInput.Output]>
+				<[string8][InputModulation][StopLightInput.Output]>
 			>
-			<[graphics_pointlight][stop_light_R7][]
+			<[graphics_pointlight][StopLightR7][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
 				<[tmvector3d][R0][-1.8975	-0.5559	0.74295 ]>
@@ -684,9 +678,9 @@
 				<[float64][Size][0.02]>
 				<[tmvector3d][Color][ 1.0 0.3 0.1 1.0 ]>
 				<[float64][Brightness][2.0]>
-				<[string8][InputModulation][STOPLightInput.Output]>
+				<[string8][InputModulation][StopLightInput.Output]>
 			>
-			<[graphics_pointlight][stop_light_R8][]
+			<[graphics_pointlight][StopLightR8][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
 				<[tmvector3d][R0][-1.90295	-0.4945	0.74485 ]>
@@ -696,12 +690,12 @@
 				<[float64][Size][0.02]>
 				<[tmvector3d][Color][ 1.0 0.3 0.1 1.0 ]>
 				<[float64][Brightness][2.0]>
-				<[string8][InputModulation][STOPLightInput.Output]>
+				<[string8][InputModulation][StopLightInput.Output]>
 			>
 			<[graphics_input][FrontLightInput][]
 				<[uint32][InputID][ServoLight.Output]>
 			>
-			<[graphics_pointlight][front_light_L1][]
+			<[graphics_pointlight][FrontLightL1][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
 				<[tmvector3d][R0][1.7706 0.5314 0.5651 ]>
@@ -713,7 +707,7 @@
 				<[float64][Brightness][8.0]>
 				<[string8][InputModulation][FrontLightInput.Output]>
 			>
-			<[graphics_pointlight][front_light_R1][]
+			<[graphics_pointlight][FrontLightR1][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
 				<[tmvector3d][R0][1.7706 -0.5313 0.5651 ]>
