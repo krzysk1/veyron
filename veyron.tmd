@@ -463,7 +463,7 @@
 				<[uint32][AngleID][ServoSteering.Output]>
 				<[tmvector3d][Axis][0.9744 0.0 -0.2248]>
 				<[tmvector3d][Pivot][0.58485 0.3636 0.7258]>
-				<[float64][AngleMax][1.2]> //0.4-> 1.0
+				<[float64][AngleMax][3]> //0.4-> 1.0
 			>
 			<[hingedbodygraphics][RightRearWheel][]
 				<[string8][GeometryList][ tire1 tire101 tire102 ]>
