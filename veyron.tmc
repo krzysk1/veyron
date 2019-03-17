@@ -3,7 +3,8 @@
         <[int][Version][210]>
         <[vec32array][ContactSpheres][ (-1.3342 -0.973 0.3618 0.3618) (-1.3342 0.973 0.3618 0.3618) (1.3052 -0.968 0.3448 0.3618) (1.3052 0.968 0.3448 0.3618) ]>
         <[string8][DisplayName][Bugatti Veyron]>
-        <[string8][DescriptionTextEN][The Bugatti Veyron EB 16.4 is a mid-engined sports car, designed and developed in Germany by the Volkswagen Group and manufactured in Molsheim, France, by Bugatti Automobiles S.A.S. The original version had a top speed of 407.12 km/h (252.97 mph).#Made by Krzysztof Kaniewski. 3D model: Valery Gus'ev.]>
+        <[string8][DescriptionTextEN][The Bugatti Veyron EB 16.4 is a mid-engined sports car, designed and developed in Germany by the Volkswagen Group and manufactured in Molsheim, France, by Bugatti Automobiles S.A.S. The original version had a top speed of 407.12 km/h (252.97 mph).
+		Made by Krzysztof Kaniewski. Original 3D model: Valery Gus'ev.]>
 		<[float64][WingSpan][2.0]>
 		<[float64][Mass][1900]>
 		<[float64][MaximumSpeed][116]>
@@ -15,15 +16,15 @@
 		<[tmvector2d][FlapSpeedRange][ 0.0 0.0 ]>
         <[float64][MaximumAltitude][0.0]>
         <[float64][CruiseAltitude] [0.0]>
-        <[float64][QSpan][8.74]>
-        <[float64][QMass][1000.0]>
-        <[float64][QSpeed][86.0]>
-        <[float64][QPower][118000.0]>
+        <[float64][QSpan][2.0]>
+        <[float64][QMass][1888.0]>
+        <[float64][QSpeed][116.0]>
+        <[float64][QPower][736000.0]>
         <[float64][QThrust][0.0]>
-        <[float64][QRange][1085000.0]>
+        <[float64][QRange][0.0]>
         <[float64][QRatio][0.0]>
-        <[float64][QBuild][1300]>
-        <[float64][QVirgin][1972]>
+        <[float64][QBuild][450]>
+        <[float64][QVirgin][2005]>
 		<[bool][Retracts][true]>
 		<[string8][Pilot][pilot_jason]>
     >

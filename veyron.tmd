@@ -1,4 +1,12 @@
 <[file][][]
+
+	//-------------------------------------
+	// Model: Bugatti Veyron
+	// Compilation: krzysk(at)wp.pl
+	// 3D model: Valery Gus'ev
+	// Date: Mon Mar 30 2015; 2019
+	//-------------------------------------
+
 	<[modelmanager][][]
 		<[pointer_list_tmuniverse][DynamicObjects][]
 			<[telemetry][Telemetry][]
@@ -73,7 +81,6 @@
 				<[uint32][Type][0]>
                 <[string8][InputLock][1.0]>
                 <[string8][InputPosition][ServoSteering.Output]>
-			//	<[float64][Rotation1Angle][0.4]>
 			>
 			<[rigidbody][RightFrontGear][]
 				<[float64][Mass][13.5]>
@@ -91,7 +98,6 @@
 				<[uint32][Type][0]>
                 <[string8][InputLock][1.0]>
                 <[string8][InputPosition][ServoSteering.Output]>
-			//	<[float64][Rotation1Angle][0.4]>
 			>
 			<[rigidbody][LeftRearGear][]
 				<[float64][Mass][18.5]>
@@ -123,30 +129,6 @@
 				<[tmvector3d][R0][ -1.3342 -0.65 0.3618 ]>
 				<[uint32][Type][1]>
 			>
-	//		<[collisionhull][CollisionLeftFrontGear][]
-	//			<[string8][Body][LeftFrontGear]>
-	//			<[string8][Geometry][tire4]>
-	//			<[float64][K][788000]>
-    //				<[float64][D][16320]>
-	//		>
-	//		<[collisionhull][CollisionRightFrontGear][]
-//				<[string8][Body][RightFrontGear]>
-//				<[string8][Geometry][tire3]>
-//				<[float64][K][1088000]>
-//				<[float64][D][26320]>
-//			>
-//			<[collisionhull][CollisionLeftRearGear][]
-//				<[string8][Body][LeftRearGear]>
-//				<[string8][Geometry][tire2]>
-//				<[float64][K][788000]>
-//				<[float64][D][26320]>
-//			>
-//			<[collisionhull][CollisionRightRearGear][]
-//				<[string8][Body][RightRearGear]>
-//				<[string8][Geometry][tire1]>
-//				<[float64][K][1088000]>
-//				<[float64][D][16320]>
-//			>
 			<[wheel][LeftFrontWheelHull][]
 				<[float64][K][184400]>
 				<[float64][D][4330]>
@@ -199,6 +181,25 @@
 				<[string8][InputBrake][BrakeInput.Output]>
 				<[float64][BrakeStrength][0.8]>			
 			>
+			<[output][GroundRollSpeedLeft][]
+				<[string8][Input][LeftRearWheelHull.Speed]>
+			>
+			<[output][GroundRollLoadLeft][]
+				<[string8][Input][LeftRearWheelHull.Load]>
+			>
+            <[output][LeftSkid][]
+                <[string8][Input][LeftRearWheelHull.Skid]>
+            >			
+			<[output][GroundRollSpeedRight][]
+				<[string8][Input][RightRearWheelHull.Speed]>
+			>
+			<[output][GroundRollLoadRight][]
+				<[string8][Input][RightRearWheelHull.Load]>
+			>
+            <[output][RightSkid][]
+                <[string8][Input][RightRearWheelHull.Skid]>
+            >
+			
 			<[airfoil][AirfoilHorizontalStabilizer][]
 				<[float64][Cl0][0.0]>
 				<[float64][Cd0][0.004]>
@@ -391,18 +392,6 @@
 			>
 			<[output][AirspeedIndicatorNeedle][]
 				<[string8][Input][AirspeedIndicator.IndicatedAirspeed]>
-			>
-			<[output][GroundRollSpeedLeft][]
-				<[string8][Input][LeftRearWheelHull.Speed]>
-			>
-			<[output][GroundRollLoadLeft][]
-				<[string8][Input][LeftRearWheelHull.Load]>
-			>
-			<[output][GroundRollSpeedRight][]
-				<[string8][Input][RightRearWheelHull.Speed]>
-			>
-			<[output][GroundRollLoadRight][]
-				<[string8][Input][RightRearWheelHull.Load]>
 			>
 			<[output][EngineRotation][]
 				<[string8][Input][Engine.N2]>
@@ -2816,6 +2805,61 @@
 				<[uint32][VelocityID][Fuselage.V]>
 				<[string8][SoundFile][ground_roll.wav]>
 			>
+            // tyre sound
+            <[soundinput][FrontSkid][]
+                <[uint32][InputID][FrontSkid.Output]>
+            >
+            <[soundmapping][FrontSkidMap][]
+                <[string8][Input][FrontSkid.Output]>
+                <[tmvector2d][Map][ (0.0 0.0) (10.0 0.0) (100.0 1.0) ]>
+            >
+            <[soundmapping][FrontSkidPitch][]
+                <[string8][Input][FrontSkid.Output]>
+                <[tmvector2d][Map][ (0.0 0.7) ( 1000.0 1.0) ]>
+            >
+            <[soundloop][FrontSkidSound][]
+                <[string8][InputVolume][FrontSkidMap.Output]>
+                <[string8][InputPitch][FrontSkidPitch.Output]>
+                <[uint32][PositionID][Fuselage.R]>
+                <[uint32][VelocityID][Fuselage.V]>
+                <[string8][SoundFile][squeal.wav]>
+            >
+            <[soundinput][LeftSkid][]
+                <[uint32][InputID][LeftSkid.Output]>
+            >
+            <[soundmapping][LeftSkidMap][]
+                <[string8][Input][LeftSkid.Output]>
+                <[tmvector2d][Map][ (0.0 0.0) (10.0 0.0) (100.0 1.0) ]>
+            >
+            <[soundmapping][LeftSkidPitch][]
+                <[string8][Input][LeftSkid.Output]>
+                <[tmvector2d][Map][ (0.0 0.7) ( 1000.0 1.0) ]>
+            >
+            <[soundloop][LeftSkidSound][]
+                <[string8][InputVolume][LeftSkidMap.Output]>
+                <[string8][InputPitch][LeftSkidPitch.Output]>
+                <[uint32][PositionID][Fuselage.R]>
+                <[uint32][VelocityID][Fuselage.V]>
+                <[string8][SoundFile][squeal.wav]>
+            >
+            <[soundinput][RightSkid][]
+                <[uint32][InputID][RightSkid.Output]>
+            >
+            <[soundmapping][RightSkidMap][]
+                <[string8][Input][RightSkid.Output]>
+                <[tmvector2d][Map][ (0.0 0.0) (10.0 0.0) (100.0 1.0) ]>
+            >
+            <[soundmapping][RightSkidPitch][]
+                <[string8][Input][RightSkid.Output]>
+                <[tmvector2d][Map][ (0.0 0.7) ( 1000.0 1.0) ]>
+            >
+            <[soundloop][RightSkidSound][]
+                <[string8][InputVolume][RightSkidMap.Output]>
+                <[string8][InputPitch][RightSkidPitch.Output]>
+                <[uint32][PositionID][Fuselage.R]>
+                <[uint32][VelocityID][Fuselage.V]>
+                <[string8][SoundFile][squeal.wav]>
+            >			
 		>
 	>
 >
