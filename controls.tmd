@@ -1,6 +1,71 @@
 <[file][][]
     <[modelmanager][][]
         <[pointer_list_tmcontrol][ControlObjects][]
+
+            <[control_input][GearStickTravel][]
+                <[uint32][InputID][ServoReverseGear.Output]>
+            >
+            <[control_rotation][GearStickTransform][]
+                <[string8][Input][GearStickTravel.Output]>
+				<[tmvector3d][Axis][0.0 -1.0 0.0]>
+				<[tmvector3d][Pivot][0.48605 0.0 0.5832]>
+            >		
+            <[control_cylinder][GearStick][3]
+                <[string8][Type][lever]>
+                <[vector3_float64][R0][0.4778 0.0 0.6539]>  
+                <[matrix3_float64][B0][ 0.0 0.0 1.0  0.0 1.0 0.0  -1.0 0.0 0.0 ]>
+                <[string8][InputTransform][GearStickTransform.Output]>
+                <[vector3_float64][Direction][ -1.0 0.0 0.0 ]>
+                <[float64][StepDistance][0.001]>
+                <[control_message][OnStep][]
+                    <[string8][Message][Controls.Gear]>
+                    <[string8][Qualifiers][step]>
+                    <[float64][Value][0.03]>
+                >
+                <[float64][Radius][0.023]>
+                <[float64][Length][0.14]>
+            >		
+		
+            <[control_input][SteeringWheelTravel][]
+				<[uint32][InputID][ServoSteering.Output]>
+				<[float64][Scaling][3]>
+				<[float64][Offset][0.0]>
+            >
+            <[control_rotation][SteeringWheelTransform][]
+                <[string8][Input][SteeringWheelTravel.Output]>
+				<[tmvector3d][Axis][0.9744 0.0 -0.2248]>
+				<[tmvector3d][Pivot][0.58485 0.3636 0.7258]>
+            >		
+            <[control_cylinder][LeftSteeringWheelGrip][3]
+                <[string8][Type][knob]>
+                <[vector3_float64][R0][0.5327 0.4976 0.732]>  
+                <[matrix3_float64][B0][ 0.0 0.0 1.0  0.0 1.0 0.0  -1.0 0.0 0.0 ]>
+                <[string8][InputTransform][SteeringWheelTransform.Output]>
+                <[vector3_float64][Direction][ 0.9744 0.0 -0.2248 ]>
+                <[float64][StepDistance][0.00005]>
+                <[control_message][OnRotate][]
+                    <[string8][Message][Controls.Yaw.Input]>
+                    <[string8][Qualifiers][step]>
+                    <[float64][Value][7.0]>
+                >
+                <[float64][Radius][0.023]>
+                <[float64][Length][0.15]>
+            >
+            <[control_cylinder][RightSteeringWheelGrip][3]
+                <[string8][Type][knob]>
+                <[vector3_float64][R0][0.5327 0.227 0.732]>
+                <[matrix3_float64][B0][ 0.0 0.0 1.0  0.0 1.0 0.0  -1.0 0.0 0.0 ]>
+                <[string8][InputTransform][SteeringWheelTransform.Output]>
+                <[vector3_float64][Direction][ 0.9744 0.0 -0.2248 ]>
+                <[float64][StepDistance][0.00005]>
+                <[control_message][OnRotate][]
+                    <[string8][Message][Controls.Yaw.Input]>
+                    <[string8][Qualifiers][step]>
+                    <[float64][Value][7.0]>
+                >
+                <[float64][Radius][0.023]>
+                <[float64][Length][0.15]>
+            >			
         >
     >
 >

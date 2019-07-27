@@ -4,7 +4,7 @@
 	// Model: Bugatti Veyron
 	// Compilation: Krzysztof Kaniewski
 	// 3D model: Valery Gus'ev
-	// Date: Mon Mar 30 2015; Apr 01 2019
+	// Date: Mon Mar 30 2015; Jul 2019
 	//-------------------------------------
 
 	<[modelmanager][][]
@@ -15,7 +15,6 @@
 				<[string8][PowerPosition][ThrottleInput.Output]>
 				<[string8][Airspeed][AirspeedIndicator.IndicatedAirspeed]>
 				<[string8][BrakePosition][BrakeInput.Output]>
-				<[string8][GearPosition][GearInput.Output]>
 				<[tmvector3d][LookAtPosition][ 0.0 0.0 0.3 ]>
 			>
 			<[camera][CameraFollow][]
@@ -25,23 +24,17 @@
 				<[tmvector3d][Direction][1.0 0.0 0.0]>
 			>
 			<[camera_head][CameraPilot][]
-				<[string8][Description][Driver view]>
+                <[string8][Tags][cockpit pilot left]>
 				<[string8][Body][Fuselage]>
 				<[tmvector3d][R0][ 0.1703 0.3572 0.9531 ]>
 				<[tmvector3d][Direction][ 1.0 0.0 0.0 ]>
 				<[float64][Kf][40.0]>
-				<[float64][Df][1.00]>
+				<[float64][Df][1.0]>
 				<[float64][Kt][0.04]>
 				<[float64][Dt][0.02]>
 				<[bool][InCockpit][true]>
 			>
-			<[camera][CameraLeftWing][]
-				<[string8][Description][Left view]>
-				<[string8][Body][Fuselage]>
-				<[tmvector3d][R0][ 0.7340 4.1940 -0.2447 ]>
-				<[tmvector3d][Direction][ -0.4350 -0.8989 0.0524 ]>
-			>
-			<[camera][CameraRightWing][]
+			<[camera][CameraRightSide][]
 				<[string8][Description][Right view]>
 				<[string8][Body][Fuselage]>
 				<[tmvector3d][R0][ -5.7943 -4.1940 1.5589 ]>
@@ -52,12 +45,6 @@
 				<[string8][Body][Fuselage]>
 				<[tmvector3d][R0][ 4.7340 0.3670 0.3670 ]>
 				<[tmvector3d][Direction][ -0.9918 -0.0903 -0.0903 ]>
-			>
-			<[camera][CameraTail][]
-				<[string8][Description][Rear view]>
-				<[string8][Body][Fuselage]>
-				<[tmvector3d][R0][ -6.7943 0.0 2.5981 ]>
-				<[tmvector3d][Direction][ 0.9042 0.0 -0.4272 ]>
 			>
 			<[rigidbody][Fuselage][]
 				<[float64][Mass][1900]>
@@ -264,16 +251,8 @@
             <[sender][SenderThrottlePosition][]
                 <[string8][Input][ThrottleInput.Output]>
                 <[string8][Message][Aircraft.Throttle]>
-            >			
-			<[input_default][AileronInput][]
-				<[string8][Input][Controls.Roll.Input]>
-				<[tmvector2d][Range][-1.0 1.0]>
-			>
-			<[input_default][ElevatorInput][]
-				<[string8][Input][Controls.Pitch.Input]>
-				<[tmvector2d][Range][-1.0 1.0]>
-			>
-			<[input_default][RudderInput][]
+            >
+			<[input_control][RudderInput][]
 				<[string8][Input][Controls.Yaw.Input]>
 				<[tmvector2d][Range][-1.0 1.0]>
 			>
@@ -291,20 +270,18 @@
                 <[string8][Input][BrakePedal.Output]>
                 <[float64array][Coefficients][ 0.5 0.5 0.0 ]>
             >			
-			<[input_default][GearInput][]
+			<[input_binary][GearInput][]
 				<[string8][Input][Controls.Gear]>
 			>
-			<[input_default][LightInput][]
-                <[string8][Input][Controls.Flaps]>
-				<[tmvector2d][Range][0.0 1.0]>								
+            <[input_switch][LightInput][]
+                <[string8][Input][Controls.Lighting.Navigation]>
+                <[float64][Value][0.0]>				
 			>
 			<[servoclassic][ServoBrake][]
 				<[string8][Input][BrakeInput.Output]>
 				<[float64][Speed][10.0]>
 				<[float64][P0][0.0]>
 				<[float64][P1][-1.0]>
-				<[float64][P2][0.0]>
-				<[float64][P3][0.0]>
 			>
 			<[output_free][ServoBrakeOutput][]
 				<[string8][Input][ServoBrake.Output]>
@@ -314,8 +291,6 @@
 				<[float64][Speed][10.0]>
 				<[float64][P0][0.0]>
 				<[float64][P1][1.0]>
-				<[float64][P2][0.0]>
-				<[float64][P3][0.0]>
 			>
 			<[output_free][ServoThrottleOutput][]
 				<[string8][Input][ServoThrottle.Output]>
@@ -325,8 +300,6 @@
 				<[float64][Speed][4.0]>
 				<[float64][P0][0.0]>
 				<[float64][P1][-0.4]>
-				<[float64][P2][0.0]>
-				<[float64][P3][0.0]>
 			>
 			<[output_free][ServoSteeringOutput][]
 				<[string8][Input][ServoSteering.Output]>
@@ -732,11 +705,11 @@
 			>
 			<[graphics_translation][RightFootTransform][]
 				<[string8][Input][0.15]>
-				<[tmvector3d][Axis][-0.0 0.20000 0.200000]>
+				<[tmvector3d][Axis][-0.0 0.20000 0.2]>
 			>
 			<[graphics_translation][LeftFootTransform][]
 				<[string8][Input][0.15]>
-				<[tmvector3d][Axis][-0.0 -0.20000 0.200000]>
+				<[tmvector3d][Axis][-0.0 -0.20000 0.2]>
 			>
 			<[graphics_input][SteeringWheelInput][]
 				<[uint32][InputID][ServoSteering.Output]>
