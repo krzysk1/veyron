@@ -722,7 +722,7 @@
 				<[tmvector3d][Pivot][0.58485 0.3636 0.7258]>
 			>
 			<[graphics_human][Pilot][]
-				<[string8][GeometryList][ PilotBody ]>
+				<[string8][GeometryList][ PilotBody PilotHead ]>
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
 				<[uint32][ShowInside][4]>
