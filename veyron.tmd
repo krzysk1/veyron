@@ -4,7 +4,7 @@
 	// Model: Bugatti Veyron
 	// Compilation: Krzysztof Kaniewski
 	// 3D model: Valery Gus'ev
-	// Date: Mon Mar 30 2015; Jul 2019
+	// Date: Mon Mar 30 2015; Jul 2019; Aug 2020
 	//-------------------------------------
 
 	<[modelmanager][][]
@@ -54,7 +54,7 @@
 			>
             <[collisionhull][CollisionFuselage][]
                 <[string8][Body][Fuselage]>
-                <[string8][Geometry][obj2]>
+                <[string8][Geometry][Obj2]>
                 <[float64][K][1624000]>
                 <[float64][D][16240]>
             >			
@@ -394,18 +394,18 @@
 		>
 		<[pointer_list_tmgraphics][GraphicObjects][]
 			<[rigidbodygraphics][Fuselage][]
-				<[string8][GeometryList][ obj1 obj2 obj3 obj4 obj5 obj6 obj7 obj8 obj9 ]>
+				<[string8][GeometryList][ Obj1 Obj2 Obj3 Obj4 Obj5 Obj6 Obj7 Obj8 Obj9 ]>
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
 			>
 			<[rigidbodygraphics][driver][]
-		//		<[string8][GeometryList][ driver ]>
+		//		<[string8][GeometryList][ Driver ]>
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
 				<[uint32][ShowInside][4]>
 			>
 			<[hingedbodygraphics][Spoiler][]
-				<[string8][GeometryList][ spoiler ]>
+				<[string8][GeometryList][ Spoiler ]>
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
 				<[uint32][AngleID][ServoBrake.Output]>
@@ -414,7 +414,7 @@
 				<[float64][AngleMax][0.5]>
 			>
 			<[hingedbodygraphics][GearStick][]
-				<[string8][GeometryList][ gear_stick ]>
+				<[string8][GeometryList][ GearStick ]>
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
 				<[uint32][AngleID][ServoReverseGear.Output]>
@@ -423,7 +423,7 @@
 				<[float64][AngleMax][1.0]>
 			>
 			<[hingedbodygraphics][ThrottlePedal][]
-				<[string8][GeometryList][ throttle_pedal ]>
+				<[string8][GeometryList][ ThrottlePedal ]>
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
 				<[uint32][AngleID][ServoThrottle.Output]>
@@ -432,7 +432,7 @@
 				<[float64][AngleMax][0.2]>
 			>
 			<[hingedbodygraphics][BrakePedal][]
-				<[string8][GeometryList][ brake_pedal ]>
+				<[string8][GeometryList][ BrakePedal ]>
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
 				<[uint32][AngleID][ServoBrake.Output]>
@@ -441,7 +441,7 @@
 				<[float64][AngleMax][0.3]>
 			>
 			<[hingedbodygraphics][SteeringWheel][]
-				<[string8][GeometryList][ steering ]>
+				<[string8][GeometryList][ Steering ]>
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
 				<[uint32][AngleID][ServoSteering.Output]>
@@ -450,7 +450,7 @@
 				<[float64][AngleMax][3]>
 			>
 			<[hingedbodygraphics][RightRearWheel][]
-				<[string8][GeometryList][ tire1 tire101 tire102 ]>
+				<[string8][GeometryList][ Tire1 Tire101 Tire102 ]>
 				<[uint32][PositionID][RightRearGear.R]>
 				<[uint32][OrientationID][RightRearGear.Q]>
 				<[uint32][AngleID][RightRearWheelHull.RotationAngle]>
@@ -458,7 +458,7 @@
 				<[tmvector3d][Pivot][-1.3342 -0.973 0.3618]>
 			>
 			<[hingedbodygraphics][LeftRearWheel][]
-				<[string8][GeometryList][ tire2 tire201 tire202 ]>
+				<[string8][GeometryList][ Tire2 Tire201 Tire202 ]>
 				<[uint32][PositionID][LeftRearGear.R]>
 				<[uint32][OrientationID][LeftRearGear.Q]>
 				<[uint32][AngleID][LeftRearWheelHull.RotationAngle]>
@@ -466,7 +466,7 @@
 				<[tmvector3d][Pivot][-1.3342 -0.973 0.3618]>
 			>
 			<[hingedbodygraphics][RightFrontWheel][]
-				<[string8][GeometryList][ tire3 tire301 tire302 ]>
+				<[string8][GeometryList][ Tire3 Tire301 Tire302 ]>
 				<[uint32][PositionID][RightFrontGear.R]>
 				<[uint32][OrientationID][RightFrontGear.Q]>
 				<[uint32][AngleID][RightFrontWheelHull.RotationAngle]>
@@ -474,7 +474,7 @@
 				<[tmvector3d][Pivot][1.3052 -0.968 0.3448]>
 			>
 			<[hingedbodygraphics][LeftFrontWheel][]
-				<[string8][GeometryList][ tire4 tire401 tire402 ]>
+				<[string8][GeometryList][ Tire4 Tire401 Tire402 ]>
 				<[uint32][PositionID][LeftFrontGear.R]>
 				<[uint32][OrientationID][LeftFrontGear.Q]>
 				<[uint32][AngleID][LeftFrontWheelHull.RotationAngle]>
@@ -2834,3 +2834,4 @@
 		>
 	>
 >
+
