@@ -1,20 +1,16 @@
 <[file][][]
 
 	//-------------------------------------
-	// Model: Bugatti Veyron
+	// Model: Bugatti Veyron for Aerofly FS4
 	// Compilation: Krzysztof Kaniewski
 	// 3D model: Valery Gus'ev
-	// Date: Mon Mar 30 2015; Jul 2019; Aug 2020
+	// Date: Mon Mar 30 2015; Jul 2019; Aug 2020; Jul 2022
 	//-------------------------------------
 
 	<[modelmanager][][]
 		<[pointer_list_tmuniverse][DynamicObjects][]
 			<[telemetry][Telemetry][]
 				<[string8][Body][Fuselage]>
-				<[bool][CompensatedVariometer][false]>
-				<[string8][PowerPosition][ThrottleInput.Output]>
-				<[string8][Airspeed][AirspeedIndicator.IndicatedAirspeed]>
-				<[string8][BrakePosition][BrakeInput.Output]>
 				<[tmvector3d][LookAtPosition][ 0.0 0.0 0.3 ]>
 			>
 			<[camera][CameraFollow][]
@@ -246,18 +242,18 @@
 				<[float64][Cm][ 0.0 ]>
 			>
 			<[input_lever][ThrottleInput][]
-				<[string8][Input][Controls.Throttle1]>
+				<[string8][Message][Controls.Throttle1]>
 			>
             <[sender][SenderThrottlePosition][]
                 <[string8][Input][ThrottleInput.Output]>
                 <[string8][Message][Aircraft.Throttle]>
             >
 			<[input_control][RudderInput][]
-				<[string8][Input][Controls.Yaw.Input]>
+				<[string8][Message][Controls.Yaw.Input]>
 				<[tmvector2d][Range][-1.0 1.0]>
 			>
 			<[input_default][BrakeInput][]
-                <[string8][Input][Controls.WheelBrake.Left]>
+                <[string8][Message][Controls.WheelBrake.Left]>
 				<[tmvector2d][Range][0.0 1.0]>				
 			>
             <[servoclassic][BrakePedal][]
@@ -271,10 +267,10 @@
                 <[float64array][Coefficients][ 0.5 0.5 0.0 ]>
             >			
 			<[input_binary][GearInput][]
-				<[string8][Input][Controls.Gear]>
+				<[string8][Message][Controls.Gear]>
 			>
             <[input_switch][LightInput][]
-                <[string8][Input][Controls.Lighting.Navigation]>
+                <[string8][Message][Controls.Lighting.Navigation]>
                 <[float64][Value][0.0]>				
 			>
 			<[servoclassic][ServoBrake][]
@@ -352,7 +348,11 @@
 			<[sender][SenderMach][]
 				<[string8][Input][PitotTube.MachNumber]>
 				<[string8][Message][Aircraft.MachNumber]>
-			>
+            >
+            <[sender][SenderAngleOfAttack][]
+                <[string8][Input][PitotTube.AngleOfAttack]>
+                <[string8][Message][Aircraft.AngleOfAttack]>
+            >
 			<[airspeed_indicator][AirspeedIndicator][]
 				<[string8][StaticPressure][PitotTube.StaticPressure]>
 				<[string8][TotalPressure][PitotTube.TotalPressure]>
@@ -408,77 +408,77 @@
 				<[string8][GeometryList][ Spoiler ]>
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
-				<[uint32][AngleID][ServoBrake.Output]>
-				<[tmvector3d][Axis][0.0 1.0 0.0]>
+				<[uint32][InputID][ServoBrake.Output]>
+                <[tmvector3d][Axis][ -0.0 -1.0 -0.0 ]>
 				<[tmvector3d][Pivot][-1.7169 0.0 0.8671]>
-				<[float64][AngleMax][0.5]>
+				<[float64][Scaling][0.5]>
 			>
 			<[hingedbodygraphics][GearStick][]
 				<[string8][GeometryList][ GearStick ]>
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
-				<[uint32][AngleID][ServoReverseGear.Output]>
-				<[tmvector3d][Axis][0.0 -1.0 0.0]>
+				<[uint32][InputID][ServoReverseGear.Output]>
+                <[tmvector3d][Axis][ -0.0 1.0 -0.0 ]>
 				<[tmvector3d][Pivot][0.48605 0.0 0.5832]>
-				<[float64][AngleMax][1.0]>
+				<[float64][Scaling][1.0]>
 			>
 			<[hingedbodygraphics][ThrottlePedal][]
 				<[string8][GeometryList][ ThrottlePedal ]>
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
-				<[uint32][AngleID][ServoThrottle.Output]>
-				<[tmvector3d][Axis][0.0 -1.0 0.0]>
+				<[uint32][InputID][ServoThrottle.Output]>
+                <[tmvector3d][Axis][ -0.0 1.0 -0.0 ]>
 				<[tmvector3d][Pivot][0.9649 0.2173 0.2589]>
-				<[float64][AngleMax][0.2]>
+				<[float64][Scaling][0.2]>
 			>
 			<[hingedbodygraphics][BrakePedal][]
 				<[string8][GeometryList][ BrakePedal ]>
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
-				<[uint32][AngleID][ServoBrake.Output]>
-				<[tmvector3d][Axis][0.0 -1.0 0.0]>
+				<[uint32][InputID][ServoBrake.Output]>
+                <[tmvector3d][Axis][ -0.0 1.0 -0.0 ]>
 				<[tmvector3d][Pivot][1.1008 0.3386 0.5492]>
-				<[float64][AngleMax][0.3]>
+				<[float64][Scaling][0.3]>
 			>
 			<[hingedbodygraphics][SteeringWheel][]
 				<[string8][GeometryList][ Steering ]>
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
-				<[uint32][AngleID][ServoSteering.Output]>
-				<[tmvector3d][Axis][0.9744 0.0 -0.2248]>
+				<[uint32][InputID][ServoSteering.Output]>
+                <[tmvector3d][Axis][ -0.9744 -0.0 0.2248 ]>
 				<[tmvector3d][Pivot][0.58485 0.3636 0.7258]>
-				<[float64][AngleMax][3]>
+				<[float64][Scaling][3]>
 			>
 			<[hingedbodygraphics][RightRearWheel][]
 				<[string8][GeometryList][ Tire1 Tire101 Tire102 ]>
 				<[uint32][PositionID][RightRearGear.R]>
 				<[uint32][OrientationID][RightRearGear.Q]>
-				<[uint32][AngleID][RightRearWheelHull.RotationAngle]>
-				<[tmvector3d][Axis][0.0 -1.0 0.0]>
+				<[uint32][InputID][RightRearWheelHull.RotationAngle]>
+                <[tmvector3d][Axis][ -0.0 1.0 -0.0 ]>
 				<[tmvector3d][Pivot][-1.3342 -0.973 0.3618]>
 			>
 			<[hingedbodygraphics][LeftRearWheel][]
 				<[string8][GeometryList][ Tire2 Tire201 Tire202 ]>
 				<[uint32][PositionID][LeftRearGear.R]>
 				<[uint32][OrientationID][LeftRearGear.Q]>
-				<[uint32][AngleID][LeftRearWheelHull.RotationAngle]>
-				<[tmvector3d][Axis][0.0 -1.0 0.0]>
+				<[uint32][InputID][LeftRearWheelHull.RotationAngle]>
+                <[tmvector3d][Axis][ -0.0 1.0 -0.0 ]>
 				<[tmvector3d][Pivot][-1.3342 -0.973 0.3618]>
 			>
 			<[hingedbodygraphics][RightFrontWheel][]
 				<[string8][GeometryList][ Tire3 Tire301 Tire302 ]>
 				<[uint32][PositionID][RightFrontGear.R]>
 				<[uint32][OrientationID][RightFrontGear.Q]>
-				<[uint32][AngleID][RightFrontWheelHull.RotationAngle]>
-				<[tmvector3d][Axis][0.0 -1.0 0.0]>
+				<[uint32][InputID][RightFrontWheelHull.RotationAngle]>
+                <[tmvector3d][Axis][ -0.0 1.0 -0.0 ]>
 				<[tmvector3d][Pivot][1.3052 -0.968 0.3448]>
 			>
 			<[hingedbodygraphics][LeftFrontWheel][]
 				<[string8][GeometryList][ Tire4 Tire401 Tire402 ]>
 				<[uint32][PositionID][LeftFrontGear.R]>
 				<[uint32][OrientationID][LeftFrontGear.Q]>
-				<[uint32][AngleID][LeftFrontWheelHull.RotationAngle]>
-				<[tmvector3d][Axis][0.0 -1.0 0.0]>
+				<[uint32][InputID][LeftFrontWheelHull.RotationAngle]>
+                <[tmvector3d][Axis][ -0.0 1.0 -0.0 ]>
 				<[tmvector3d][Pivot][1.3052 0.968 0.3448]>
 			>
 			<[graphics_input][StopLightInput][]
@@ -717,8 +717,8 @@
 				<[float64][Offset][0.1]>
 			>
 			<[graphics_rotation][StickRollTransform][]
-				<[uint32][InputAngle][SteeringWheelInput.Output]>
-				<[tmvector3d][Axis][0.9744 0.0 -0.2248]>
+				<[uint32][Input][SteeringWheelInput.Output]>
+                <[tmvector3d][Axis][ -0.9744 -0.0 0.2248 ]>
 				<[tmvector3d][Pivot][0.58485 0.3636 0.7258]>
 			>
 			<[graphics_human][Pilot][]
@@ -2834,4 +2834,3 @@
 		>
 	>
 >
-
