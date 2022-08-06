@@ -53,7 +53,7 @@
                 <[string8][Geometry][Obj2]>
                 <[float64][K][1624000]>
                 <[float64][D][16240]>
-            >			
+            >
 			<[rigidbody][LeftFrontGear][]
 				<[float64][Mass][13.5]>
 				<[tmvector3d][InertiaLength][ 0.6896 0.27 0.6896 ]>
@@ -124,12 +124,12 @@
 				<[float64][Radius][0.3448]>
                 <[float64][Width][0.2628]>
                 <[float64][RimRadius][0.1413]>
-                <[float64][Inflation][120528.4]>					
+                <[float64][Inflation][120528.4]>
 				<[string8][Body][LeftFrontGear]>
 				<[tmvector3d][R0][1.3052 0.968 0.3448]>
 				<[tmvector3d][X0][ 1.0 0.0 0.0 ]>
 				<[string8][InputBrake][Brake.Output]>
-				<[float64][BrakeStrength][0.8]>					
+				<[float64][BrakeStrength][0.8]>
 			>
 			<[wheel][RightFrontWheelHull][]
 				<[float64][K][184400]>
@@ -137,12 +137,12 @@
 				<[float64][Radius][0.3448]>
                 <[float64][Width][0.2628]>
                 <[float64][RimRadius][0.2603]>
-                <[float64][Inflation][120528.4]>				
+                <[float64][Inflation][120528.4]>
 				<[string8][Body][RightFrontGear]>
 				<[tmvector3d][R0][1.3052 -0.968 0.3448]>
 				<[tmvector3d][X0][ 1.0 0.0 0.0 ]>
 				<[string8][InputBrake][Brake.Output]>
-				<[float64][BrakeStrength][0.8]>					
+				<[float64][BrakeStrength][0.8]>
 			>
 			<[wheel][LeftRearWheelHull][]
 				<[float64][K][184400]>
@@ -150,12 +150,12 @@
 				<[float64][Radius][0.3618]>
                 <[float64][Width][0.3448]>
                 <[float64][RimRadius][0.2732]>
-                <[float64][Inflation][120528.4]>					
+                <[float64][Inflation][120528.4]>
 				<[string8][Body][LeftRearGear]>
 				<[tmvector3d][R0][-1.3342 0.973 0.3618]>
 				<[tmvector3d][X0][ 1.0 0.0 0.0 ]>
 				<[string8][InputBrake][Brake.Output]>
-				<[float64][BrakeStrength][0.8]>				
+				<[float64][BrakeStrength][0.8]>
 			>
 			<[wheel][RightRearWheelHull][]
 				<[float64][K][184400]>
@@ -163,12 +163,12 @@
 				<[float64][Radius][0.3618]>
                 <[float64][Width][0.3448]>
                 <[float64][RimRadius][0.2732]>
-                <[float64][Inflation][120528.4]>					
+                <[float64][Inflation][120528.4]>
 				<[string8][Body][RightRearGear]>
 				<[tmvector3d][R0][-1.3342 -0.973 0.3618]>
 				<[tmvector3d][X0][ 1.0 0.0 0.0 ]>
 				<[string8][InputBrake][Brake.Output]>
-				<[float64][BrakeStrength][0.8]>			
+				<[float64][BrakeStrength][0.8]>
 			>
 			<[output][GroundRollSpeedLeft][]
 				<[string8][Input][LeftRearWheelHull.Speed]>
@@ -178,7 +178,7 @@
 			>
             <[output][LeftSkid][]
                 <[string8][Input][LeftRearWheelHull.Skid]>
-            >			
+            >
 			<[output][GroundRollSpeedRight][]
 				<[string8][Input][RightRearWheelHull.Speed]>
 			>
@@ -188,7 +188,7 @@
             <[output][RightSkid][]
                 <[string8][Input][RightRearWheelHull.Skid]>
             >
-			
+
 			<[airfoil][AirfoilHorizontalStabilizer][]
 				<[float64][Cl0][0.0]>
 				<[float64][Cd0][0.004]>
@@ -254,24 +254,24 @@
 			>
 			<[input_default][BrakeInput][]
                 <[string8][Message][Controls.WheelBrake.Left]>
-				<[tmvector2d][Range][0.0 1.0]>				
+				<[tmvector2d][Range][0.0 1.0]>
 			>
             <[servoclassic][BrakePedal][]
                 <[string8][Input][BrakeInput.Output]>
                 <[float64][Speed][15.0]>
                 <[float64][P1][1.0]>
                 <[float64][Position][0.0]>
-            >			
+            >
             <[polynomial][Brake][]
                 <[string8][Input][BrakePedal.Output]>
                 <[float64array][Coefficients][ 0.5 0.5 0.0 ]>
-            >			
+            >
 			<[input_binary][GearInput][]
 				<[string8][Message][Controls.Gear]>
 			>
             <[input_switch][LightInput][]
                 <[string8][Message][Controls.Lighting.Navigation]>
-                <[float64][Value][0.0]>				
+                <[float64][Value][0.0]>
 			>
 			<[servoclassic][ServoBrake][]
 				<[string8][Input][BrakeInput.Output]>
@@ -378,7 +378,7 @@
             >
             <[output][UniversalTime][]
                 <[string8][Input][Clock.OutputUniversalTime]>
-            >	
+            >
 			<[output][HeadingAngle][]
 				<[string8][Input][HeadingIndicator.MagneticHeading]>
 			>
@@ -2830,7 +2830,7 @@
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][VelocityID][Fuselage.V]>
                 <[string8][SoundFile][skid_dry.wav]>
-            >			
+            >
 		>
 	>
 >
