@@ -4,7 +4,7 @@
 	// Model: Bugatti Veyron for Aerofly FS4
 	// Compilation: Krzysztof Kaniewski
 	// 3D model: Valery Gus'ev
-	// Date: Mon Mar 30 2015; Jul 2019; Aug 2020; Jul 2022
+	// Date: Mon Mar 30 2015; Jul 2019; Aug 2020; Aug 2022
 	//-------------------------------------
 
 	<[modelmanager][][]
@@ -487,7 +487,7 @@
 			<[graphics_pointlight][StopLightL1][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
-				<[tmvector3d][R0][-1.8654	0.55155	0.79575 ]>
+				<[tmvector3d][R0][-1.8654 0.55155 0.79575 ]>
 				<[tmvector3d][X0][ -1.0 0.0 0.0 ]>
 				<[float64][ConeCenter][0.9]>
 				<[float64][ConeCutoff][0.6]>
@@ -496,10 +496,37 @@
 				<[float64][Brightness][2.0]>
 				<[string8][InputModulation][StopLightInput.Output]>
 			>
+            <[graphics_conelight][StopLightL1Cone][]
+				<[uint32][PositionID][Fuselage.R]>
+				<[uint32][OrientationID][Fuselage.Q]>
+				<[tmvector3d][R0][-1.8654 0.55155 0.79575 ]>
+				<[tmvector3d][X0][ -1.0 0.0 0.0 ]>
+                <[tmvector3d][Color][ 1.0 0.3 0.1 1.0 ]>
+                <[float64][Brightness][ 0.1 ]>
+                <[float64][ConeCenter][1.0]>
+                <[float64][ConeCutoff][-0.91]>
+				<[string8][InputModulation][StopLightInput.Output]>
+                <[float64][Size][50.0]>
+                <[float64][Falloff][8.0]>
+            >
+            <[graphics_conelight][StopLightL1Glow][]
+				<[uint32][PositionID][Fuselage.R]>
+				<[uint32][OrientationID][Fuselage.Q]>
+				<[tmvector3d][R0][-1.8654 0.55155 0.79575 ]>
+				<[tmvector3d][X0][ -1.0 0.0 0.0 ]>
+                <[tmvector3d][Color][ 1.0 0.3 0.1 1.0 ]>
+                <[float64][Brightness][ 0.5 ]>
+                <[float64][ConeCenter][-0.89]>
+                <[float64][ConeCutoff][-0.99]>
+				<[string8][InputModulation][StopLightInput.Output]>
+                <[float64][Size][1.0]>
+                <[float64][Falloff][8.0]>
+            >
+
 			<[graphics_pointlight][StopLightL2][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
-				<[tmvector3d][R0][-1.8712	0.49655	0.79785 ]>
+				<[tmvector3d][R0][-1.8712 0.49655 0.79785 ]>
 				<[tmvector3d][X0][ -1.0 0.0 0.0 ]>
 				<[float64][ConeCenter][0.9]>
 				<[float64][ConeCutoff][0.6]>
@@ -511,7 +538,7 @@
 			<[graphics_pointlight][StopLightL3][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
-				<[tmvector3d][R0][-1.9045	0.4978	0.7414 ]>
+				<[tmvector3d][R0][-1.9045 0.4978 0.7414 ]>
 				<[tmvector3d][X0][ -1.0 0.0 0.0 ]>
 				<[float64][ConeCenter][0.9]>
 				<[float64][ConeCutoff][0.6]>
@@ -523,7 +550,7 @@
 			<[graphics_pointlight][StopLightL4][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
-				<[tmvector3d][R0][-1.89955	0.5528	0.73965 ]>
+				<[tmvector3d][R0][-1.89955 0.5528 0.73965 ]>
 				<[tmvector3d][X0][ -1.0 0.0 0.0 ]>
 				<[float64][ConeCenter][0.9]>
 				<[float64][ConeCutoff][0.6]>
@@ -535,7 +562,7 @@
 			<[graphics_pointlight][StopLightL5][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
-				<[tmvector3d][R0][-1.87865	0.40885	0.8003 ]>
+				<[tmvector3d][R0][-1.87865 0.40885 0.8003 ]>
 				<[tmvector3d][X0][ -1.0 0.0 0.0 ]>
 				<[float64][ConeCenter][0.9]>
 				<[float64][ConeCutoff][0.6]>
@@ -547,7 +574,7 @@
 			<[graphics_pointlight][StopLightL6][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
-				<[tmvector3d][R0][-1.91085	0.40995	0.74315 ]>
+				<[tmvector3d][R0][-1.91085 0.40995 0.74315 ]>
 				<[tmvector3d][X0][ -1.0 0.0 0.0 ]>
 				<[float64][ConeCenter][0.9]>
 				<[float64][ConeCutoff][0.6]>
@@ -559,7 +586,7 @@
 			<[graphics_pointlight][StopLightL7][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
-				<[tmvector3d][R0][-1.88185	0.35385	0.801 ]>
+				<[tmvector3d][R0][-1.88185 0.35385 0.801 ]>
 				<[tmvector3d][X0][ -1.0 0.0 0.0 ]>
 				<[float64][ConeCenter][0.9]>
 				<[float64][ConeCutoff][0.6]>
@@ -571,7 +598,7 @@
 			<[graphics_pointlight][StopLightL8][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
-				<[tmvector3d][R0][-1.91435	0.355	0.74405 ]>
+				<[tmvector3d][R0][-1.91435 0.355 0.74405 ]>
 				<[tmvector3d][X0][ -1.0 0.0 0.0 ]>
 				<[float64][ConeCenter][0.9]>
 				<[float64][ConeCutoff][0.6]>
@@ -583,7 +610,7 @@
 			<[graphics_pointlight][StopLightR1][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
-				<[tmvector3d][R0][-1.88185	-0.35385	0.801 ]>
+				<[tmvector3d][R0][-1.88185 -0.35385 0.801 ]>
 				<[tmvector3d][X0][ -1.0 0.0 0.0 ]>
 				<[float64][ConeCenter][0.9]>
 				<[float64][ConeCutoff][0.6]>
@@ -592,10 +619,36 @@
 				<[float64][Brightness][2.0]>
 				<[string8][InputModulation][StopLightInput.Output]>
 			>
+            <[graphics_conelight][StopLightR1Cone][]
+				<[uint32][PositionID][Fuselage.R]>
+				<[uint32][OrientationID][Fuselage.Q]>
+				<[tmvector3d][R0][-1.88185 -0.35385 0.801 ]>
+				<[tmvector3d][X0][ -1.0 0.0 0.0 ]>
+                <[tmvector3d][Color][ 1.0 0.3 0.1 1.0 ]>
+                <[float64][Brightness][ 0.1 ]>
+                <[float64][ConeCenter][1.0]>
+                <[float64][ConeCutoff][-0.91]>
+				<[string8][InputModulation][StopLightInput.Output]>
+                <[float64][Size][50.0]>
+                <[float64][Falloff][8.0]>
+            >
+            <[graphics_conelight][StopLightR1Glow][]
+				<[uint32][PositionID][Fuselage.R]>
+				<[uint32][OrientationID][Fuselage.Q]>
+				<[tmvector3d][R0][-1.88185 -0.35385 0.801 ]>
+				<[tmvector3d][X0][ -1.0 0.0 0.0 ]>
+                <[tmvector3d][Color][ 1.0 0.3 0.1 1.0 ]>
+                <[float64][Brightness][ 0.5 ]>
+                <[float64][ConeCenter][-0.89]>
+                <[float64][ConeCutoff][-0.99]>
+				<[string8][InputModulation][StopLightInput.Output]>
+                <[float64][Size][1.0]>
+                <[float64][Falloff][8.0]>
+            >
 			<[graphics_pointlight][StopLightR2][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
-				<[tmvector3d][R0][-1.87865	-0.4088	0.8003 ]>
+				<[tmvector3d][R0][-1.87865 -0.4088 0.8003 ]>
 				<[tmvector3d][X0][ -1.0 0.0 0.0 ]>
 				<[float64][ConeCenter][0.9]>
 				<[float64][ConeCutoff][0.6]>
@@ -607,7 +660,7 @@
 			<[graphics_pointlight][StopLightR3][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
-				<[tmvector3d][R0][-1.91085	-0.40995	0.74315 ]>
+				<[tmvector3d][R0][-1.91085 -0.40995 0.74315 ]>
 				<[tmvector3d][X0][ -1.0 0.0 0.0 ]>
 				<[float64][ConeCenter][0.9]>
 				<[float64][ConeCutoff][0.6]>
@@ -619,7 +672,7 @@
 			<[graphics_pointlight][StopLightR4][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
-				<[tmvector3d][R0][-1.91435	-0.35495	0.74405 ]>
+				<[tmvector3d][R0][-1.91435 -0.35495 0.74405 ]>
 				<[tmvector3d][X0][ -1.0 0.0 0.0 ]>
 				<[float64][ConeCenter][0.9]>
 				<[float64][ConeCutoff][0.6]>
@@ -631,7 +684,7 @@
 			<[graphics_pointlight][StopLightR5][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
-				<[tmvector3d][R0][-1.8712	-0.4965	0.79785 ]>
+				<[tmvector3d][R0][-1.8712 -0.4965 0.79785 ]>
 				<[tmvector3d][X0][ -1.0 0.0 0.0 ]>
 				<[float64][ConeCenter][0.9]>
 				<[float64][ConeCutoff][0.6]>
@@ -643,7 +696,7 @@
 			<[graphics_pointlight][StopLightR6][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
-				<[tmvector3d][R0][-1.8654	-0.5515	0.79575 ]>
+				<[tmvector3d][R0][-1.8654 -0.5515 0.79575 ]>
 				<[tmvector3d][X0][ -1.0 0.0 0.0 ]>
 				<[float64][ConeCenter][0.9]>
 				<[float64][ConeCutoff][0.6]>
@@ -655,7 +708,7 @@
 			<[graphics_pointlight][StopLightR7][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
-				<[tmvector3d][R0][-1.8975	-0.5559	0.74295 ]>
+				<[tmvector3d][R0][-1.8975 -0.5559 0.74295 ]>
 				<[tmvector3d][X0][ -1.0 0.0 0.0 ]>
 				<[float64][ConeCenter][0.9]>
 				<[float64][ConeCutoff][0.6]>
@@ -667,7 +720,7 @@
 			<[graphics_pointlight][StopLightR8][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
-				<[tmvector3d][R0][-1.90295	-0.4945	0.74485 ]>
+				<[tmvector3d][R0][-1.90295 -0.4945 0.74485 ]>
 				<[tmvector3d][X0][ -1.0 0.0 0.0 ]>
 				<[float64][ConeCenter][0.9]>
 				<[float64][ConeCutoff][0.6]>
@@ -691,6 +744,19 @@
 				<[float64][Brightness][28.0]>
 				<[string8][InputModulation][FrontLightInput.Output]>
 			>
+            <[graphics_conelight][FrontLightL1Cone][]
+				<[uint32][PositionID][Fuselage.R]>
+				<[uint32][OrientationID][Fuselage.Q]>
+				<[tmvector3d][R0][1.79 0.5313 0.5651 ]>
+				<[tmvector3d][X0][ 0.9 0.0 -0.1 ]>
+                <[tmvector3d][Color][ 1.0 0.8 0.6 1.0 ]>
+                <[float64][Brightness][2.0]>
+                <[float64][ConeCenter][1.0]>
+                <[float64][ConeCutoff][0.75]>
+				<[string8][InputModulation][FrontLightInput.Output]>
+                <[float64][Size][100.0]>
+                <[float64][Falloff][8.0]>
+            >
 			<[graphics_pointlight][FrontLightR1][]
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
@@ -703,6 +769,19 @@
 				<[float64][Brightness][28.0]>
 				<[string8][InputModulation][FrontLightInput.Output]>
 			>
+            <[graphics_conelight][FrontLightR1Cone][]
+				<[uint32][PositionID][Fuselage.R]>
+				<[uint32][OrientationID][Fuselage.Q]>
+				<[tmvector3d][R0][1.79 -0.5313 0.5651 ]>
+				<[tmvector3d][X0][ 0.9 0.0 -0.1 ]>
+                <[tmvector3d][Color][ 1.0 0.8 0.6 1.0 ]>
+                <[float64][Brightness][2.0]>
+                <[float64][ConeCenter][1.0]>
+                <[float64][ConeCutoff][0.75]>
+				<[string8][InputModulation][FrontLightInput.Output]>
+                <[float64][Size][100.0]>
+                <[float64][Falloff][8.0]>
+            >
 			<[graphics_translation][RightFootTransform][]
 				<[string8][Input][0.15]>
 				<[tmvector3d][Axis][-0.0 0.20000 0.2]>
