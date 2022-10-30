@@ -1,0 +1,8 @@
+<[file][][]
+    <[hints][][]
+        // Veyron
+        <[float64][MaximumTakeOffMass][1570.0]>
+        <[int][EngineCount][1]>
+        <[bool][Piston][true]>
+    >
+>
