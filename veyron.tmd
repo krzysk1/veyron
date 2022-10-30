@@ -4,7 +4,7 @@
 	// Model: Bugatti Veyron for Aerofly FS4
 	// Compilation: Krzysztof Kaniewski
 	// 3D model: Valery Gus'ev
-	// Date: Mon Mar 30 2015; Jul 2019; Aug 2020; Aug 2022
+	// Date: Mon Mar 30 2015; Jul 2019; Aug 2020; Oct 2022
 	//-------------------------------------
 
 	<[modelmanager][][]
@@ -127,7 +127,6 @@
                 <[float64][Inflation][120528.4]>
 				<[string8][Body][LeftFrontGear]>
 				<[tmvector3d][R0][1.3052 0.968 0.3448]>
-				<[tmvector3d][X0][ 1.0 0.0 0.0 ]>
 				<[string8][InputBrake][Brake.Output]>
 				<[float64][BrakeStrength][0.8]>
 			>
@@ -140,7 +139,6 @@
                 <[float64][Inflation][120528.4]>
 				<[string8][Body][RightFrontGear]>
 				<[tmvector3d][R0][1.3052 -0.968 0.3448]>
-				<[tmvector3d][X0][ 1.0 0.0 0.0 ]>
 				<[string8][InputBrake][Brake.Output]>
 				<[float64][BrakeStrength][0.8]>
 			>
@@ -153,7 +151,6 @@
                 <[float64][Inflation][120528.4]>
 				<[string8][Body][LeftRearGear]>
 				<[tmvector3d][R0][-1.3342 0.973 0.3618]>
-				<[tmvector3d][X0][ 1.0 0.0 0.0 ]>
 				<[string8][InputBrake][Brake.Output]>
 				<[float64][BrakeStrength][0.8]>
 			>
@@ -166,7 +163,6 @@
                 <[float64][Inflation][120528.4]>
 				<[string8][Body][RightRearGear]>
 				<[tmvector3d][R0][-1.3342 -0.973 0.3618]>
-				<[tmvector3d][X0][ 1.0 0.0 0.0 ]>
 				<[string8][InputBrake][Brake.Output]>
 				<[float64][BrakeStrength][0.8]>
 			>
