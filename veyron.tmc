@@ -10,14 +10,18 @@
                 <[string8][Language][en]>
                 <[string8][Text][The Bugatti Veyron EB 16.4 is a mid-engined sports car, designed and developed in Germany by the Volkswagen Group and manufactured in Molsheim, France, by Bugatti Automobiles S.A.S. The original version had a top speed of 407.12 km/h (252.97 mph). For Aerofly FS4 made by Krzysztof Kaniewski. Original 3D model made by Valery Gus'ev.]>
             >
+            <[localized_text][][]
+                <[string8][Language][de]>
+                <[string8][Text][Der Bugatti Veyron 16.4 ist ein deutsch-französischer Supersportwagen des Herstellers Bugatti Automobiles SAS mit Sitz in Molsheim (Elsass), der von der Bugatti Engineering GmbH in Wolfsburg entwickelt wurde. Mit ihm wurden mehrere Geschwindigkeitsrekorde gebrochen. Für Aerofly FS4 von Krzysztof Kaniewski. 3d-Modell erstellt von Valery Gus'ev.]>
+			>
         >
 		<[float64][WingSpan][2.0]>
 		<[float64][MaximumAirspeed][116]>
-		<[float64][MaximumSpeed][116]>		
+		<[float64][MaximumSpeed][116]>
 		<[float64][MinimumAirspeed][0.0]>
         <[float64][ApproachAirspeed][33.3]>
         <[float64][CruiseAirspeed][105.6]>
-        <[float64][CruiseSpeed][0.0]>		
+        <[float64][CruiseSpeed][0.0]>
 		<[tmvector2d][NormalAirspeedRange][ 0 97.0 ]>
 		<[tmvector2d][CautionAirspeedRange][ 97.0 116 ]>
 		<[tmvector2d][FlapAirspeedRange][ 0.0 0.0 ]>
