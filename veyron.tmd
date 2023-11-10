@@ -390,7 +390,7 @@
 		>
 		<[pointer_list_tmgraphics][GraphicObjects][]
 			<[rigidbodygraphics][Fuselage][]
-				<[string8][GeometryList][ Obj1 Obj2 Obj3 Obj4 Obj5 Obj6 Obj7 Obj8 Obj9 ]>
+				<[string8][GeometryList][ Obj1 Obj2 Obj3 Obj4 Obj5 Obj6 Obj7 Obj8 GlassOut ]> // GlassInn 
 				<[uint32][PositionID][Fuselage.R]>
 				<[uint32][OrientationID][Fuselage.Q]>
 			>
