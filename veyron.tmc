@@ -1,18 +1,22 @@
 ﻿<[file][][]
-    <[object][][]
-        <[int][Version][220]>
-        <[vec32array][ContactSpheres][ (-1.334 -0.973 0.3618 0.3618) (-1.334 0.973 0.3618 0.3618) (1.305 -0.968 0.3448 0.3618) (1.305 0.968 0.3448 0.3618) ]>
-        <[string8][ICAO][E300]>
+    <[modelinformation][][]
+        <[int32][Version][220]>
+        <[list_vector4_float64][ContactSpheres][ (-1.334 -0.973 0.362 0.362) (-1.334 0.973 0.362 0.362) (1.305 -0.968 0.345 0.362) (1.305 0.968 0.345 0.362) ]>
+        <[stringt8c][ICAO][E300]>
         <[string8][DisplayName][Bugatti Veyron]>
         <[string8][DisplayNameFull][Bugatti Veyron]>
-        <[localized_text_list][Descriptions][]
-            <[localized_text][][]
+        <[list_localized_text][Descriptions][]
+            <[localized_text][element][0]
                 <[string8][Language][en]>
                 <[string8][Text][The Bugatti Veyron EB 16.4 is a mid-engined sports car, designed and developed in Germany by the Volkswagen Group and manufactured in Molsheim, France, by Bugatti Automobiles S.A.S. The original version had a top speed of 407.12 km/h (252.97 mph). For Aerofly FS4 made by Krzysztof Kaniewski. Original 3D model made by Valery Gus'ev.]>
             >
-            <[localized_text][][]
+            <[localized_text][element][1]
                 <[string8][Language][de]>
                 <[string8][Text][Der Bugatti Veyron 16.4 ist ein deutsch-französischer Supersportwagen des Herstellers Bugatti Automobiles SAS mit Sitz in Molsheim (Elsass), der von der Bugatti Engineering GmbH in Wolfsburg entwickelt wurde. Mit ihm wurden mehrere Geschwindigkeitsrekorde gebrochen. Für Aerofly FS4 von Krzysztof Kaniewski. 3d-Modell erstellt von Valery Gus'ev.]>
+			>
+            <[localized_text][element][2]
+                <[string8][Language][pl]>
+                <[string8][Text][Bugatti Veyron EB 16.4 to samochód sportowy z silnikiem umieszczonym centralnie, zaprojektowany i opracowany w Niemczech przez Volkswagen Group i produkowany w Molsheim we Francji przez Bugatti Automobiles S.A.S. Oryginalna wersja osiągała prędkość maksymalną 407,12 km/h (252,97 mph). Dla Aerofly FS4 wykonany przez Krzysztofa Kaniewskiego. Oryginalny model 3D wykonany przez Valery'ego Gus'eva.]>
 			>
         >
 		<[float64][WingSpan][2.0]>
