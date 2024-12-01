@@ -14,7 +14,6 @@
 				<[tmvector3d][LookAtPosition][ 0.0 0.0 0.3 ]>
 			>
 			<[camera][CameraFollow][]
-				<[string8][Description][Behind aircraft]>
 				<[string8][Body][Fuselage]>
 				<[tmvector3d][R0][ -15.6 0.0 1.9 ]>
 				<[tmvector3d][Direction][1.0 0.0 0.0]>
@@ -22,7 +21,7 @@
 			<[camera_head][CameraPilot][]
                 <[string8][Tags][cockpit pilot left]>
 				<[string8][Body][Fuselage]>
-				<[tmvector3d][R0][ 0.1703 0.3572 0.9531 ]>
+				<[tmvector3d][R0][ 0.12 0.35 0.95 ]>
 				<[tmvector3d][Direction][ 1.0 0.0 0.0 ]>
 				<[float64][Kf][40.0]>
 				<[float64][Df][1.0]>
