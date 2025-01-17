@@ -19,23 +19,23 @@
                 <[string8][Text][Bugatti Veyron EB 16.4 to samochód sportowy z silnikiem umieszczonym centralnie, zaprojektowany i opracowany w Niemczech przez Volkswagen Group i produkowany w Molsheim we Francji przez Bugatti Automobiles S.A.S. Oryginalna wersja osiągała prędkość maksymalną 407,12 km/h (252,97 mph). Dla Aerofly FS4 wykonany przez Krzysztofa Kaniewskiego. Oryginalny model 3D wykonany przez Valery'ego Gus'eva.]>
 			>
         >
-		<[float64][WingSpan][2.0]>
-		<[float64][MaximumAirspeed][116]>
-		<[float64][MaximumSpeed][116]>
-		<[float64][MinimumAirspeed][0.0]>
-        <[float64][ApproachAirspeed][33.3]>
-        <[float64][CruiseAirspeed][105.6]>
-        <[float64][CruiseSpeed][0.0]>
-		<[vector2_float64][NormalAirspeedRange][ 0 97.0 ]>
-		<[vector2_float64][CautionAirspeedRange][ 97.0 116 ]>
-        <[float64][MaximumAltitude][0.0]>
-        <[float64][CruiseAltitude][0.0]>
         <[float64][MaximumTakeoffMass][1888.0]>
-        <[float64][EnginePower][736000.0]>
-        <[float64][MaximumRange][0.0]>
-        <[uint32][UnitsBuilt][450]>
-        <[uint32][EngineCount][1]>
-        <[uint32][Year][2005]>
+		<[float64][WingSpan]          [2.0]>
+        <[uint32] [Year]              [2005]>
+        <[uint32] [UnitsBuilt]        [450]>
+        <[uint32] [EngineCount]       [1]>
+		<[float64][MaximumAirspeed]   [116]>
+		<[float64][MaximumSpeed]      [116]>
+		<[float64][MinimumAirspeed]   [0.0]>
+        <[float64][ApproachAirspeed]  [33.3]>
+        <[float64][CruiseAirspeed]    [105.6]>
+        <[float64][CruiseSpeed]       [0.0]>
+        <[float64][MaximumAltitude]   [0.0]>
+        <[float64][CruiseAltitude]    [0.0]>
+        <[float64][EnginePower]       [736000.0]>
+        <[float64][MaximumRange]      [500000.0]>
+		<[vector2_float64][NormalAirspeedRange] [  0.0  97.0 ]>
+		<[vector2_float64][CautionAirspeedRange][ 97.0 116.0 ]>
         <[string8][Tags][ piston ]>
 		<[string8][Pilot][pilot_jason]>
     >
