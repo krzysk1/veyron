@@ -15,6 +15,18 @@
                 <[string8][Text][Der Bugatti Veyron 16.4 ist ein deutsch-französischer Supersportwagen des Herstellers Bugatti Automobiles SAS mit Sitz in Molsheim (Elsass), der von der Bugatti Engineering GmbH in Wolfsburg entwickelt wurde. Mit ihm wurden mehrere Geschwindigkeitsrekorde gebrochen. Für Aerofly FS4 von Krzysztof Kaniewski. 3d-Modell erstellt von Valery Gus'ev.]>
 			>
             <[localized_text][element][2]
+                <[string8u][Language][fr]>
+                <[string8][Text][La Bugatti Veyron EB 16.4 est une voiture de sport à moteur central, conçue et développée en Allemagne par le groupe Volkswagen et fabriquée à Molsheim, en France, par Bugatti Automobiles S.A.S. La version originale avait une vitesse maximale de 407,12 km/h (252,97 mph). Pour Aerofly FS4, réalisée par Krzysztof Kaniewski. Modèle 3D original réalisé par Valery Gus'ev.]>
+			>
+            <[localized_text][element][3]
+                <[string8u][Language][es]>
+                <[string8][Text][El Bugatti Veyron EB 16.4 es un automóvil deportivo con motor central, diseñado y desarrollado en Alemania por el Grupo Volkswagen y fabricado en Molsheim, Francia, por Bugatti Automobiles S.A.S. La versión original alcanzaba una velocidad máxima de 407,12 km/h (252,97 mph). Para Aerofly FS4, creado por Krzysztof Kaniewski. Modelo 3D original creado por Valery Gus'ev.]>
+			>
+            <[localized_text][element][4]
+                <[string8u][Language][it]>
+                <[string8][Text][La Bugatti Veyron EB 16.4 è un'auto sportiva con motore centrale, progettata e sviluppata in Germania dal Gruppo Volkswagen e prodotta a Molsheim, in Francia, dalla Bugatti Automobiles S.A.S. La versione originale aveva una velocità massima di 407,12 km/h (252,97 mph). Per Aerofly FS4 realizzata da Krzysztof Kaniewski. Modello 3D originale realizzato da Valery Gus'ev.]>
+			>
+            <[localized_text][element][5]
                 <[string8u][Language][pl]>
                 <[string8][Text][Bugatti Veyron EB 16.4 to samochód sportowy z silnikiem umieszczonym centralnie, zaprojektowany i opracowany w Niemczech przez Volkswagen Group i produkowany w Molsheim we Francji przez Bugatti Automobiles S.A.S. Oryginalna wersja osiągała prędkość maksymalną 407,12 km/h (252,97 mph). Dla Aerofly FS4 wykonany przez Krzysztofa Kaniewskiego. Oryginalny model 3D wykonany przez Valery'ego Gus'eva.]>
 			>
