@@ -46,6 +46,7 @@
         <[float64][CruiseAltitude]    [0.0]>
         <[float64][EnginePower]       [736000.0]>
         <[float64][MaximumRange]      [500000.0]>
+        <[vector2_float64][FlapAirspeedRange]   [  0.0  0.0 ]>
 		<[vector2_float64][NormalAirspeedRange] [  0.0  97.0 ]>
 		<[vector2_float64][CautionAirspeedRange][ 97.0 116.0 ]>
         <[string8][Tags][ piston ]>
